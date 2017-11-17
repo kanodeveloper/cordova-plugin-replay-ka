@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-replay-ka" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>cordova-plugin-replay-ka</name>
+    <description>Screen recording for android and ios</description>
+    <keywords>cordova,replaykit,screen recording</keywords>
+    <license>MIT</license>
+    <repo>https://github.com/kanodeveloper/cordova-plugin-replay-ka.git</repo>
+
+    <engines>
+        <engine name="cordova-ios" version=">=3.8.0" />
+    </engines>
+
+    <js-module name="CDVReplay" src="www/Replay.js">
+        <clobbers target="Replay"/>
+    </js-module>
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="Replay">
+                <param name="ios-package" value="CDVReplay"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVReplay.h"/>
+        <source-file src="src/ios/CDVReplay.m"/>
+        <framework src="ReplayKit.framework" weak="true"/>
+        <framework src="UIKit.framework" />
+    </platform>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Replay">
+                <param name="android-package" value="com.kanoapps.cordova.replay.Replay"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/Replay.java" target-dir="src/com/kanoapps/cordova/replay" />
+    </platform>
+</plugin>

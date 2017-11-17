@@ -1,0 +1,24 @@
+{
+  "name": "cordova-plugin-replay-ka",
+  "version": "1.0.0",
+  "description": "Screen recording for iOS and Android",
+  "cordova": {
+    "id": "cordova-plugin-replay-ka",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanodeveloper/cordova-plugin-replay-ka.git"
+  },
+  "keywords": [
+  ],
+  "author": "kanodev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kanodeveloper/cordova-plugin-replay-ka/issues"
+  },
+  "homepage": "https://github.com/kanodeveloper/cordova-plugin-replay-ka"
+}
